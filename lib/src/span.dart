@@ -68,7 +68,7 @@ class OrgSpanBuilder {
           OrgController.of(context).settings.inlineImages) {
         final imageWidget = OrgEvents.of(context).loadImage?.call(element);
         if (imageWidget != null) {
-          return WidgetSpan(child: imageWidget);
+          return imageWidget;
         }
       }
       final linkDispatcher = OrgEvents.of(context).dispatchLinkTap;
